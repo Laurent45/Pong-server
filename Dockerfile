@@ -2,7 +2,7 @@
 FROM node:18
 
 # Install nestjs/cli
-RUN npm install -g @nestjs/cli
+RUN npm i -g @nestjs/cli
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -14,7 +14,7 @@ COPY . .
 RUN yarn install
 
 # Generate the Prisma client
-RUN npx prisma generate
+#RUN npx prisma generate
 
 # Build the application
 RUN yarn run build
