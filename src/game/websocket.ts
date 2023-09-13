@@ -3,8 +3,8 @@ import http from 'http';
 import { Server } from 'socket.io';
 
 const app = express();
-const server = http.createServer(app);  // Attach express app to HTTP server
-const io = new Server(server);          // Attach socket.io to the same HTTP server
+const server = http.createServer(app);    // Attach express app to HTTP server
+const io = new Server(server);            // Attach socket.io to the same HTTP server
 
 io.on('connection', (socket) => {
     console.log('New client connected');
